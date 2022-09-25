@@ -10,12 +10,3 @@ services:
       - 5000:5000
     env_file:
       - ./.env.dev
-    depends_on:
-      - db
-  db:
-    image: "mcr.microsoft.com/mssql/server"
-    environment:
-      SA_PASSWORD: "haslO1234_"
-      ACCEPT_EULA: "Y"
-    ports:
-      - 1434:1433
